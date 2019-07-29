@@ -26,9 +26,7 @@ def send_email(to, subject, template, **kwargs):
     return thr
 
 
-def sendEmail(reciever, messageContent):
-    messageTile = "update package"
-    messgaeContent = messageContent
+def sendEmail(reciever, messageTile, messageContent):
     hostServer = "smtp.163.com"
     sender = "lieoncx@163.com"
     password = "auth1992316"

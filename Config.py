@@ -45,9 +45,9 @@ class DevelopmentConfig(Config):
 	# MONGODB_USERNAME = "lieon"
 	# MONGODB_PASSWORD = "lieon1992316"
 	MAIL_SERVER = 'smtp.163.com'
-	MAIL_PORT = 25
+	MAIL_PORT = 465
 	MAIL_USE_TLS = False
-	MAIL_USE_SSL = False
+	MAIL_USE_SSL = True
 	MAIL_USERNAME = 'lieoncx@163.com'
 	MAIL_PASSWORD = 'auth1992316'
 	FLASKY_MAIL_SUBJECT_PREFIX = '[Lieon]'
