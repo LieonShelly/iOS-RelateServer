@@ -22,7 +22,7 @@ redis_client = RedisClient()
 mail = Mail()
 
 def create_app(config_name='default'):
-    app = Flask(__name__, template_folder= Config.BASE_DIR + os.sep + 'App' + os.sep + 'Templates')
+    app = Flask(__name__)
     app.config.from_object(config[config_name])
     db.init_app(app)
     mongod.init_app(app)
