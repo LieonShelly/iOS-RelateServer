@@ -28,11 +28,6 @@ def send_mssage(body):
     message.title = title
     message.content = content
     message.email = to_email
-    print(body)
-    try:
-        message.save()
-        send_email(to_email, '消息', 'Mail/AlertMessage', message = message)
-        return True, {}
-    except Exception as e:
-        logger.exception(e)
-        return False, "异常"
+    message.save()
+    send_email(to_email, '消息', 'Mail/AlertMessage', message = message)
+    return True, {}
