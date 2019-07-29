@@ -12,7 +12,7 @@ def send_verifycode(body):
     db_code.code = code
     try:
         db_code.save()
-        send_email(to_eamil, '验证码', 'mail/VerifyCode', code = code)
+        send_email(to_eamil, '验证码', 'Mail/VerifyCode', code = code)
         return True, {}
     except Exception as e:
         logger.exception(e)
@@ -30,7 +30,7 @@ def send_mssage(body):
     message.email = to_eamil
     try:
         message.save()
-        send_email(to_eamil, '消息', 'mail/AlertMessage', message = message)
+        send_email(to_eamil, '消息', 'Mail/AlertMessage', message = message)
         return True, {}
     except Exception as e:
         logger.exception(e)
