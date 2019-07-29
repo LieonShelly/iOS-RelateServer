@@ -11,6 +11,7 @@ from App.Log import logger
 import jpush
 from celery import Celery
 from flask_mail import Mail
+import os
 
 mongod = PyMongo()
 jwt = JWTManager()
@@ -21,7 +22,7 @@ redis_client = RedisClient()
 mail = Mail()
 
 def create_app(config_name='default'):
-    app = Flask(__name__, template_folder='Templates')
+    app = Flask(__name__, template_folder= Config.BASE_DIR + os.sep + 'App' + os.sep + 'Templates')
     app.config.from_object(config[config_name])
     db.init_app(app)
     mongod.init_app(app)
