@@ -25,8 +25,8 @@ class Config:
 	JPUSH_MASTER_KEY = "0e8d2f631ac3c4b302485c24"
 	MAIL_SERVER = 'smtp.163.com'
 	MAIL_PORT = 25
-	MAIL_USE_TLS = True
-	MAIL_USE_SSL = True
+	MAIL_USE_TLS = False
+	MAIL_USE_SSL = False
 	MAIL_USERNAME = 'lieoncx@163.com'
 	MAIL_PASSWORD = 'auth1992316'
 	FLASKY_MAIL_SUBJECT_PREFIX = '[Lieon]'
