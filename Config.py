@@ -23,14 +23,7 @@ class Config:
 	REDIS_PASSWORD = None
 	JSPUSH_APP_KEY = "a639eba745bb34ae8d05ea41"
 	JPUSH_MASTER_KEY = "0e8d2f631ac3c4b302485c24"
-	MAIL_SERVER = 'smtp.163.com'
-	MAIL_PORT = 25
-	MAIL_USE_TLS = False
-	MAIL_USE_SSL = False
-	MAIL_USERNAME = 'lieoncx@163.com'
-	MAIL_PASSWORD = 'auth1992316'
-	FLASKY_MAIL_SUBJECT_PREFIX = '[Lieon]'
-	FLASKY_MAIL_SENDER = 'lieoncx@163.com'
+
 
 
 class DevelopmentConfig(Config):
@@ -44,6 +37,15 @@ class DevelopmentConfig(Config):
 	REDIS_PORT = 6379
 	# MONGODB_USERNAME = "lieon"
 	# MONGODB_PASSWORD = "lieon1992316"
+	MAIL_SERVER = 'smtp.163.com'
+	MAIL_PORT = 465
+	MAIL_USE_TLS = False
+	MAIL_USE_SSL = True
+	MAIL_USERNAME = 'lieoncx@163.com'
+	MAIL_PASSWORD = 'auth1992316'
+	FLASKY_MAIL_SUBJECT_PREFIX = '[Lieon]'
+	FLASKY_MAIL_SENDER = 'lieoncx@163.com'
+
 
 class TestingConfig(Config):
 	TESTING = True
