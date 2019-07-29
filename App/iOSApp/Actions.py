@@ -28,6 +28,6 @@ def send_mssage(body):
     message.title = title
     message.content = content
     message.email = to_email
-    message.save()
+    # message.save()
     send_email(to_email, '消息', 'Mail/AlertMessage', message = message)
     return True, {}
