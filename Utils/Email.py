@@ -20,10 +20,10 @@ def send_email(to, subject, template, **kwargs):
                   recipients=[to])
     template = render_template(template + '.html', **kwargs)
     msg.html = template
-#     thr = Thread(target=send_async_email, args=[app, msg])
-#     thr.start()
-    sendEmail(["454287928@qq.com"], 'hello there, The IPA has a update, please check in')
-#     return thr
+    thr = Thread(target=send_async_email, args=[app, msg])
+    thr.start()
+#     sendEmail(["454287928@qq.com"], 'hello there, The IPA has a update, please check in')
+    return thr
 
 
 def sendEmail(reciever, messageContent):

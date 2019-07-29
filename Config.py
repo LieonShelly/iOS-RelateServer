@@ -26,7 +26,7 @@ class Config:
 	MAIL_SERVER = 'smtp.163.com'
 	MAIL_PORT = 25
 	MAIL_USE_TLS = False
-	MAIL_USE_SSL = False
+	MAIL_USE_SSL = True
 	MAIL_USERNAME = 'lieoncx@163.com'
 	MAIL_PASSWORD = 'auth1992316'
 	FLASKY_MAIL_SUBJECT_PREFIX = '[Lieon]'
