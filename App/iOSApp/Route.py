@@ -7,7 +7,7 @@ from App.iOSApp import Actions as action
 
 @iOSApp_api.route('/send_code', methods = ['POST'])
 @decorated.params_validator(
-    ['to_eamil', str]
+    ['to_email', str]
 )
 def send_code():
     result = action.send_verifycode(request.json)
@@ -18,7 +18,7 @@ def send_code():
 @decorated.params_validator(
     ['title', str],
     ['content', str],
-    ['to_eamil', str]
+    ['to_email', str]
 )
 def send_message():
     result = action.send_mssage(request.json)
